@@ -107,6 +107,7 @@ class ImportUserCsv extends \Concrete\Core\Page\Controller\DashboardPageControll
                 $data = [
                     'uName'     => $uName,
                     'uEmail'    => $uEmail,
+                    'uPassword' => $uPassword,
                 ];
                 /** @var \Concrete\Core\User\RegistrationService $userRegistrationService */
                 $userRegistrationService = Core::make('Concrete\Core\User\RegistrationServiceInterface');
@@ -179,6 +180,7 @@ class ImportUserCsv extends \Concrete\Core\Page\Controller\DashboardPageControll
         return $columns = [
             'uName'         => 'Username',
             'uEmail'        => 'User Email',
+            'uPassword'     => 'Password',
             'uDisplayName'  => 'User Display Name',
             'gName'         => 'User Group Name',
             'firstname'     => 'First Name',
